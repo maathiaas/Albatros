@@ -2,6 +2,7 @@
 from django.urls import reverse_lazy
 from django.views import generic
 from .forms import CustomUserCreationForm
+from django.contrib.auth import authenticate
 
 from django.shortcuts import redirect, render
 
@@ -19,7 +20,7 @@ def SignUp(request):
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
-            login(request, user)
+            #login(request, user)
             return redirect('home')
     else:
         form = CustomUserCreationForm()
