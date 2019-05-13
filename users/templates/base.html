@@ -54,17 +54,20 @@
             </div>
             <div class="collapse navbar-collapse" id="primary_menu">
                 <ul class="nav navbar-nav mainmenu">
-                    <li class="active"><a href="#">Inicio</a></li>
-                    <li><a href="#">Objetivo</a></li>
-                    <li><a href="#">Funciones</a></li>
-                    <li><a href="#">¿Cómo reciclar?</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li class="active"><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="#about_page">Objetivo</a></li>
+                    <li><a href="#features_page">Funciones</a></li>
+                    <li><a href="#gallery_page">¿Cómo reciclar?</a></li>
+                    <li><a href="#contact_page">Contacto</a></li>
+                    {% if user.is_authenticated %}
                     <li><a href="#">Mapa</a></li>
-                    <li><a href="">Desafíos</a></li>
+                    <li><a href="#">Desafíos</a></li>
                     <li><a href="#">Perfil</a></li>
+                    {% endif %}
                 </ul>
                 <div class="right-button hidden-xs">
                     <a href="{% url 'login' %}">Iniciar sesión</a>
+                    <a href="{% url 'signup' %}">Registrate</a>
                 </div>
             </div>
         </div>
