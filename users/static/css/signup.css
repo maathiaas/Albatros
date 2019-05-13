@@ -1,0 +1,99 @@
+.contenedor-form{
+    background:#23201f;
+    color: 	#f9f9f9;
+    margin: 0px auto;
+    max-width: 550px;
+    width: 100%;
+    border-radius: 2px;
+    box-shadow:0 2px 3px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.container-log{
+    margin: 50px;
+}
+
+.container-log h2{
+    font-size: 38px;
+    text-align: center;
+}
+
+.contenedor-form input[type="text"],
+.contenedor-form input[type="password"],
+.contenedor-form input[type="email"]{
+    outline: none;
+    background: rgba(0,0,0,0.5);
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    color: 	#f9f9f9;
+    border: none;
+    border-radius: 2px;
+    border-bottom: 4px solid #34d058;
+    /*box-sizing: border-box;*/
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    transition: all .2s;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.0);
+}
+
+.contenedor-form input[type="text"]:hover,
+.contenedor-form input[type="password"]:hover
+{
+    border-bottom: 4px solid 	#f9f9f9;
+    transition: 0.2s;
+}
+
+#iniciar,#enviar{
+    background:	#34d058;
+    margin-bottom: 20px;
+    color: 	#f9f9f9;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all .2s;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.3);
+}
+
+#iniciar:hover,#enviar:hover{
+    background: 	#f9f9f9;
+    color: #23201f;
+    box-shadow: inset 0 2px 3px rgba(0,0,0,0.3), 0 1px 3px rgba(0,0,0,0.3);
+}
+
+#iniciar:active,#enviar:active{
+    border: #f9f9f9;
+}
+
+.fa{
+    margin:20px
+}
+
+#iniciar-redes{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    color: #34d058;
+    font-size: 40px;
+    margin: 0 20px 10px 20px;
+    transition: 0.2s;
+    text-shadow: 0 2px 3px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.5);
+}
+
+#iniciar-redes:hover{
+    text-shadow:0 5px 5px rgba(0,0,0,0.9), 0 1px 3px rgba(0,0,0,1);
+    color:#f9f9f9;
+}
+
+#iniciar-redes a{
+    text-decoration: none;
+    color: inherit;
+}
