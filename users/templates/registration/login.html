@@ -7,16 +7,21 @@
 
 
 {% block content %}
+
 <header class="feature-area section-padding-top" id="features_page">
+    <!--<form method="post">-->
     <div class="container">
         <div class="contenedor-form" id="formInicio d-none">
             <div class="container-log">
                     <h2>Iniciar sesión</h2>
                 <input id="usuario" type="text" placeholder="Usuario" required>
                 <input id="contraseña" type="password" placeholder="Contraseña" required>
+             <!-- {% csrf_token %}
+              {{ form.as_p }}-->
                 <button type="button" name="iniciar" id="iniciar" value="Login">Iniciar sesión</button>
             </div>
         </div>
     </div>
+  <!--</form>-->
 </header>
 {% endblock %}
