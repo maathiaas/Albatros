@@ -16,8 +16,9 @@
                     
                 <form method="post">
                         {% csrf_token %}
-                        {{ form.as_p }}
-                        <button type="submit" name="iniciar" id="iniciar" value="Login">Iniciar sesión</button>
+                        <input type="text" name="username" maxlength="150" autofocus required id="id_username" placeholder="Usuario">
+                        <input type="password" name="password" required id="id_password" placeholder="Contraseña">
+                        <button type="submit" name="iniciar" id="iniciar" value="login">Iniciar sesión</button>
                 </form>
 
             </div>

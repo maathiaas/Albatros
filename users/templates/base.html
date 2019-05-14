@@ -30,6 +30,10 @@
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        .gallery-slide .owl-stage-outer {
+            background: url("{% static 'images/mobile-screen.png' %}") no-repeat center right / auto 100%; }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
@@ -55,31 +59,28 @@
             <div class="collapse navbar-collapse" id="primary_menu">
                 <ul class="nav navbar-nav mainmenu">
                     <li class="active"><a href="{% url 'home' %}">Inicio</a></li>
+                    {% if user.is_anonymous %}
                     <li><a href="#about_page">Objetivo</a></li>
                     <li><a href="#features_page">Funciones</a></li>
                     <li><a href="#gallery_page">¿Cómo reciclar?</a></li>
                     <li><a href="#contact_page">Contacto</a></li>
+                    {% endif %}
                     {% if user.is_authenticated %}
                     <li><a href="#">Mapa</a></li>
                     <li><a href="#">Desafíos</a></li>
                     <li><a href="#">Perfil</a></li>
                     {% endif %}
                 </ul>
+
+                {% if user.is_anonymous %}
                 <div class="right-button hidden-xs">
-
-
-                    {% if user.is_anonymous %}
                     <a href="{% url 'login' %}">Iniciar sesión</a>
-                    {% endif %}
-
-
-
-                    {% if user.is_authenticated %}
-                    Hi {{ user.username }}!
+                </div> {% endif %}
+                {% if user.is_authenticated %}
+                <div class="right-button hidden-xs">
                     <a href="{% url 'logout' %}">cerrar sesión</a>
-                    {% endif %}
-
                 </div>
+                {% endif %}
             </div>
         </div>
     </nav>
