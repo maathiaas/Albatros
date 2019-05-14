@@ -7,29 +7,30 @@ from django.contrib.auth.models import User
 
 
 class CustomUserCreationForm(UserCreationForm):
-    first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
-    email = forms.EmailField(max_length=254, )
+    # first_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    # last_name = forms.CharField(max_length=30, required=False, help_text='Optional.')
+    # email = forms.EmailField(max_length=254, )
 
     class Meta:
         model = CustomUser
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
+        fields = ('username', 'first_name', 'last_name',
+                  'email', 'password1', 'password2', )
 
 
-#class CustomUserCreationForm(UserCreationForm):
+# class CustomUserCreationForm(UserCreationForm):
 #    email = forms.EmailField(required=True)
 
 #    class Meta(UserCreationForm):
 #        models = User
 #        fields = (
-#            'username', 
+#            'username',
 #            'first_name',
 #            'last_name',
 #            'email',
 #            'password1',
 #            'password2',
 #            )
-#    
+#
 #    def save(self, commit=True):
 #        user = super(CustomUserCreationForm, self).save(commit=False)
 #        user.first_name = cleaned_data['first_name']
@@ -40,11 +41,9 @@ class CustomUserCreationForm(UserCreationForm):
 #            user.save()
 
 #        return user
-        
 
 
-
-#class CustomUserCreationForm(UserCreationForm):
+# class CustomUserCreationForm(UserCreationForm):
 
 #    class Meta(UserCreationForm):
 #        model = CustomUser

@@ -6,24 +6,28 @@
 {% block content %}
 <header class="feature-area section-padding-top" id="features_page">
     <div class="container">
-        
+
         <div class="contenedor-form" id="formInicio">
             <div class="container-log">
-                    <h2>Registrarse</h2>
+                <h2>Registrarse</h2>
 
-            <form method="post">      
-                <input type="text" name="username" maxlength="150" autofocus required id="id_username" placeholder="Usuario">
-                <input type="text" name="first_name" maxlength="30" autofocus required id="id_first_name" placeholder="Nombre">
-                <input type="text" name="last_name" maxlength="30" autofocus required id="id_last_name" placeholder="Apellidos">
-                <input type="text" name="email" maxlength="30" autofocus required id="id_email" placeholder="Correo">
-                <input type="password" name="password1" required id="id_password1" placeholder="Contraseña">
-                <input type="password" name="password2" required id="id_password2" placeholder="Confirmar contraseña">
-                <button type="submit" name="enviar" id="enviar" value="signup">Registrarse</button> 
-                {% csrf_token %}
-            </form>
-            </div>                
+                <form method="post">
+                    <input type="text" name="username" maxlength="150" autofocus required id="id_username"
+                        placeholder="Usuario">
+                    <input type="text" name="first_name" maxlength="30" autofocus required id="id_first_name"
+                        placeholder="Nombre">
+                    <input type="text" name="last_name" maxlength="30" autofocus required id="id_last_name"
+                        placeholder="Apellidos">
+                    <input type="text" name="email" maxlength="30" autofocus required id="id_email"
+                        placeholder="Correo">
+                    <input type="password" name="password1" required id="id_password1" placeholder="Contraseña">
+                    <input type="password" name="password2" required id="id_password2"
+                        placeholder="Confirmar contraseña">
+                    <button type="submit" name="enviar" id="enviar" value="signup">Registrarse</button>
+                    {% csrf_token %}
+                </form>
+            </div>
         </div>
     </div>
 </header>
 {% endblock %}
-
