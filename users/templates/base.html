@@ -10,7 +10,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>{% block title %}{% endblock %}</title> 
+    <title>{% block title %}{% endblock %}</title>
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
     <link rel="shortcut icon" type="image/ico" href="{% static 'images/favicon.ico' %}" />
@@ -63,11 +63,12 @@
                     <li><a href="#">Mapa</a></li>
                     <li><a href="#">Desafíos</a></li>
                     <li><a href="#">Perfil</a></li>
+                    <li><a href="{% url 'logout' %}">Cerrar sesión</a></li>
                     {% endif %}
                 </ul>
                 <div class="right-button hidden-xs">
                     <a href="{% url 'login' %}">Iniciar sesión</a>
-                  <!-- <a href="{% url 'signup' %}">Registrate</a>--> 
+                    <!-- <a href="{% url 'signup' %}">Registrate</a>-->
                 </div>
             </div>
         </div>
@@ -75,8 +76,8 @@
     <!-- MainMenu-Area-End -->
 
 
- {% block content %}
- {% endblock %}
+    {% block content %}
+    {% endblock %}
 
     <!-- Footer-Area -->
     <footer class="footer-area" id="contact_page">
@@ -128,8 +129,10 @@
                 <div class="row">
                     <div class="col-xs-12 col-md-5">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            <span>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Los reciclappos</span>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        <span>Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> All rights reserved | Los
+                            reciclappos</span>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         <div class="space-30 hidden visible-xs"></div>
                     </div>
 
