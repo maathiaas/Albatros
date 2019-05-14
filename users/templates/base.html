@@ -60,15 +60,19 @@
                     <li><a href="#gallery_page">¿Cómo reciclar?</a></li>
                     <li><a href="#contact_page">Contacto</a></li>
                     {% if user.is_authenticated %}
-                    Hi {{ user.username }}!
                     <li><a href="#">Mapa</a></li>
                     <li><a href="#">Desafíos</a></li>
                     <li><a href="#">Perfil</a></li>
-                    <li><a href="{% url 'logout' %}">cerrar sesión</a></li>
-                    {% endif %}
+                     {% endif %}
                 </ul>
                 <div class="right-button hidden-xs">
+                        {% if user.is_anonymous %}
                     <a href="{% url 'login' %}">Iniciar sesión</a>
+                    {% endif %}
+                    {% if user.is_authenticated %}
+                    <a href="{% url 'logout' %}">cerrar sesión</a>
+                    Hi {{ user.username }}!
+                    {% endif %}
                   <!-- <a href="{% url 'signup' %}">Registrate</a>--> 
                 </div>
             </div>
