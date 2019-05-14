@@ -15,41 +15,6 @@ class CustomUserCreationForm(UserCreationForm):
         model = CustomUser
         fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2', )
 
-
-#class CustomUserCreationForm(UserCreationForm):
-#    email = forms.EmailField(required=True)
-
-#    class Meta(UserCreationForm):
-#        models = User
-#        fields = (
-#            'username', 
-#            'first_name',
-#            'last_name',
-#            'email',
-#            'password1',
-#            'password2',
-#            )
-#    
-#    def save(self, commit=True):
-#        user = super(CustomUserCreationForm, self).save(commit=False)
-#        user.first_name = cleaned_data['first_name']
-#        user.last_name = cleaned_data['last_name']
-#        user.email = cleaned_data['email']
-#
-#        if commit:
-#            user.save()
-
-#        return user
-        
-
-
-
-#class CustomUserCreationForm(UserCreationForm):
-
-#    class Meta(UserCreationForm):
-#        model = CustomUser
-#        fields = ('username', 'email')
-
 class CustomUserChangeForm(UserChangeForm):
 
     class Meta:
