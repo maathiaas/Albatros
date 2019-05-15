@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Perfil{% endblock %}
+
+
+{% block content %}
+
+<header class="feature-area section-padding-top" id="features_page">
+    <div class="container">
+        <div class="contenedor-form" id="formInicio d-none">
+            <div class="container-log">
+                    <h1>Perfil</h1>
+                    <h2>Nombre: {{ user.first_name}}</h2>
+                    <h2>Apellido: {{ user.last_name}}</h2>
+                    <h2>Correo: {{ user.email}}</h2>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
