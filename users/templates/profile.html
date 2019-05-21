@@ -5,17 +5,19 @@
 
 
 {% block content %}
-
-<header class="feature-area section-padding-top" id="features_page">
+<section class="home-area overlay" id="home_page">
     <div class="container">
-        <div class="contenedor-form" id="formInicio d-none">
-            <div class="container-log">
-                    <h1>Perfil</h1>
-                    <h2>Nombre: {{ user.first_name}}</h2>
-                    <h2>Apellido: {{ user.last_name}}</h2>
-                    <h2>Correo: {{ user.email}}</h2>
+            <div class="contenedor-form" id="formInicio d-none">
+                <div class="container-log">
+                    <h2 class="wow fadeInUp" data-wow-delay="0.2s">Perfil</h2>
+                    <p class="wow fadeInUp" data-wow-delay="0.4s">Nombre:   {{ user.first_name }} {{user.last_name }}</p>
+                    <p class="wow fadeInUp" data-wow-delay="0.4s"> Correo:   {{ user.email }}</p>
+                    <div class="space-20"></div>
+                    <div class="space-20"></div>
+                </div>
+                
             </div>
-        </div>
+            
     </div>
-</header>
+</section>
 {% endblock %}

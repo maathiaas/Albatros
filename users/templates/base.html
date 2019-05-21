@@ -10,7 +10,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title>{% block title %}{% endblock %}</title> 
+    <title>Reciclappo - {% block title %}{% endblock %}</title> 
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="{% static 'images/apple-touch-icon.png' %}">
     <link rel="shortcut icon" type="image/ico" href="{% static 'images/favicon.ico' %}" />
@@ -68,20 +68,18 @@
                     {% endif %}
                     {% if user.is_authenticated %}
                     <li><a href="#">Mapa</a></li>
-                    <li><a href="#">Desafíos</a></li>
                     <li><a href="{% url 'profile' %}">Perfil</a></li>
                     {% endif %}
+                    {% if user.is_anonymous %}
+                    <div class="right-button ">
+                        <a href="{% url 'login' %}">Iniciar sesión</a>
+                    </div> {% endif %}
+                    {% if user.is_authenticated %}
+                    <div class="right-button">
+                        <a href="{% url 'logout' %}">cerrar sesión</a>
+                    </div>
+                    {% endif %}
                 </ul>
-
-                {% if user.is_anonymous %}
-                <div class="right-button hidden-xs">
-                    <a href="{% url 'login' %}">Iniciar sesión</a>
-                </div> {% endif %}
-                {% if user.is_authenticated %}
-                <div class="right-button hidden-xs">
-                    <a href="{% url 'logout' %}">cerrar sesión</a>
-                </div>
-                {% endif %}
             </div>
         </div>
     </nav>

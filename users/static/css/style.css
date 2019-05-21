@@ -345,7 +345,11 @@ input:-webkit-autofill:focus {
     right: 15px;
     top: 12px;
 }
-
+@media only screen and (max-width: 767px){
+    .mainmenu-area .right-button{
+        position: initial;
+    }
+}
 .mainmenu-area .right-button a {
     color: #ffffff;
     padding: 10px 40px;
