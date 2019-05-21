@@ -21,3 +21,7 @@ def SignUp(request):
 @login_required
 def Profile(request):
     return render(request,'profile.html')
+
+@login_required
+def MapBox(request):
+    return render(request,'mapbox.html')

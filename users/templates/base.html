@@ -34,6 +34,15 @@
         .gallery-slide .owl-stage-outer {
             background: url("{% static 'images/mobile-screen.png' %}") no-repeat center right / auto 100%; }
     </style>
+
+    <!--Mapita-->
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js"></script>
+    <link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.css" type="text/css" />
+    <link rel="stylesheet" href="{% static 'css/styleMap.css' %}">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.css" type="text/css" />
+
+    <!--Fin mapa-->
 </head>
 
 <body data-spy="scroll" data-target=".mainmenu-area">
@@ -67,7 +76,7 @@
                     <li><a href="#contact_page">Contacto</a></li>
                     {% endif %}
                     {% if user.is_authenticated %}
-                    <li><a href="#">Mapa</a></li>
+                    <li><a href="{% url 'mapbox' %}">Mapa</a></li>
                     <li><a href="{% url 'profile' %}">Perfil</a></li>
                     {% endif %}
                     {% if user.is_anonymous %}
@@ -163,6 +172,12 @@
     <script src="{% static 'js/wow.min.js' %}"></script>
     <!--Main-active-JS-->
     <script src="{% static 'js/main.js' %}"></script>
+    <!--JS MAPA-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-directions/v4.0.0/mapbox-gl-directions.js">
+    </script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.min.js">
+    </script>
+    <script src="{% static 'js/map.js' %}"></script>
 </body>
 
 </html>
