@@ -181,6 +181,56 @@ var geojson = {
                 title: 'Punto verde',
                 description: 'Parque Central Ote 100'
             }
+        }, {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-70.7683819, -33.4973612]
+            },
+            properties: {
+                title: 'Mini punto verde',
+                description: 'Los Andes #775'
+            }
+        }, {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-70.7339179, -33.4744254]
+            },
+            properties: {
+                title: 'Punto verde',
+                description: 'Las Parcelas #3734'
+            }
+        }, {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-70.7536668, -33.5052807]
+            },
+            properties: {
+                title: 'Punto de reciclaje de aceite',
+                description: 'Capellán Benavides #2321'
+            }
+        }, {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-70.7785696, -33.5002345]
+            },
+            properties: {
+                title: 'Punto de reciclaje de aceite',
+                description: 'Asunción #1440'
+            }
+        }, {
+            type: 'Feature',
+            geometry: {
+                type: 'Point',
+                coordinates: [-70.7837406, -33.5456269]
+            },
+            properties: {
+                title: 'Punto verde',
+                description: 'Calle Esdras #60'
+            }
         },
     ]
 };
